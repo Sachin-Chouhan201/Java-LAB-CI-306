@@ -14,11 +14,11 @@ class ARMSTRONG {
 
         if(num==sum)
         {
-            System.out.println(" It  Is Armstrong ");
+            System.out.println( num + " Is Armstrong ");
         }
         else
         {
-            System.out.println(" It  Is NOT Armstrong ");
+            System.out.println( num + " Is NOT Armstrong ");
         }
 	}
 }
