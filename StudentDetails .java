@@ -4,7 +4,7 @@
 import java.util.Scanner;
  
 class StudentDetails {
- String name,enroll;
+          String name,enroll;
           int DS, OOPS, DLC,EEE,MATHS;        
           void input()
           {
@@ -31,7 +31,7 @@ class StudentDetails {
        void display()
         {
           System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-          System.out,println("Student Details Are  );
+          System.out.println("Student Details Are  ");
           System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
           System.out.println("En-Roll Number:" + enroll +"\tName: "+name);
           System.out.println("Marks in Data Structure : " + DS );
@@ -39,26 +39,33 @@ class StudentDetails {
           System.out.println("Marks in DIGITAL LOGIC : " + DLC );
           System.out.println("Marks in EEE : " + EEE  );
           System.out.println("Marks in MATHS : " + MATHS );
-          System.out.println("Total: "+total +"\tPercentage: "+perc);
          }
-                             
+}          
 class Grade extends Student
 {
-        void calc()
-        {
-                       int total=DS+DLC+OOPS+EEE+MATHS;
-                       float perc=(float)total/500*100;
-        }
+    int total;
+    float perc;
+    void calc()
+    {
+             total=DS+DLC+OOPS+EEE+MATHS;
+             perc=(float)total/350*100;
+        
+    }
+    void displaygrade()
+    {
+                  System.out.println("Total: "+total +"\tPercentage: "+perc);
+    }
 }
-                             
+class Main extends Grade
+{
       public static void main(String args[])
       {
           Grade g=new Grade();
           g.input();
           g.cal();
           g.display();
+          g.displaygrade();
       }
-          
 }
 
 
