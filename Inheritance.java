@@ -3,21 +3,22 @@
 //program to get student details
 import java.util.Scanner;
  
-
-public class STUDENT
-{
-      public static void main(String args[])
-      {
-          String name,enroll;
+class Student{
+ String name,enroll;
           int DS, OOPS, DLC,EEE,MATHS;
            
           Scanner SC=new Scanner(System.in);
-           
-          System.out.print("Enter Name: ");
+        
+        void getdata(){
+          
+          System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+          System.out.println("Enter studentb Details ");
+          System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+          System.out.println("Enter Name: ");
           name=SC.nextLine();
-          System.out.print("Enter EN-Roll Number: ");
+          System.out.println("Enter EN-Roll Number: ");
           enroll=SC.nextLine();
-          System.out.print("Enter marks in Data Structure : ");
+          System.out.println("Enter marks in Data Structure : ");
           DS=SC.nextInt();
           System.out.println("Enter marks in OPPS : ");
           OOPS=SC.nextInt();
@@ -29,7 +30,14 @@ public class STUDENT
           MATHS=SC.nextInt();
           int total=DS+DLC+OOPS+EEE+MATHS;
           float perc=(float)total/500*100;
-           
+        }
+ 
+        void display()
+        {
+                   
+          System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+          System.out,println("Student Details Are  );
+          System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
           System.out.println("En-Roll Number:" + enroll +"\tName: "+name);
           System.out.println("Marks in Data Structure : " + DS );
           System.out.println("Marks in OOPS : "+ OOPS );
@@ -37,7 +45,19 @@ public class STUDENT
           System.out.println("Marks in EEE : " + EEE  );
           System.out.println("Marks in MATHS : " + MATHS );
           System.out.println("Total: "+total +"\tPercentage: "+perc);
-            
+
+       }
+}
+
+class Grade extends Student
+{
+}
+
+public class Inheritance 
+{
+      public static void main(String args[])
+      {
+          
       }
           
 }
