@@ -1,11 +1,14 @@
 // Java program to find area of circle
-	
-class Area
+class AreaOfCircle 
 {
-	public static void main(String[] args)
-	{
-    double PI = Math.PI;
-    double area=PI*Math.pow(5, 2);//here 5 is radius
-		System.out.println("Area is " + area);
-	}
+   public static void main(String args[]) 
+    {   
+       
+      Scanner s= new Scanner(System.in);
+        
+         System.out.println("Enter the radius:");
+         double r= s.nextDouble();
+         double  area=(22*r*r)/7 ;
+         System.out.println("Area of Circle is: " + area);      
+   }
 }
